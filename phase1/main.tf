@@ -25,6 +25,13 @@ resource "aws_security_group" "security_group" {
     cidr_blocks = ["0.0.0.0/0"] # HTTP
   }
 
+  ingress {
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    cidr_blocks = ["172.31.0.0/16"]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -49,7 +56,7 @@ resource "aws_instance" "app_server" {
   vpc_security_group_ids = [aws_security_group.security_group.id]
 
   tags = {
-    Name = "projet-terraform"
+    Name = "projet-terraform-phase1"
   }
 
   user_data = file("UserdataScript-phase-2.sh")
