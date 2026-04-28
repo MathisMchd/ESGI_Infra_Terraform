@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36" version="29.1.1">
+  <diagram name="Page-1" id="0I-4K081B6VlU9_-M3CR">
+    <mxGraphModel dx="1603" dy="1980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-18" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;fillStyle=solid;" value="VPC" vertex="1">
+          <mxGeometry height="390" width="700" x="100" y="-570" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-52" connectable="0" parent="jFHjM4vxk34ADtfL2BeO-18" style="group" value="" vertex="1">
+          <mxGeometry height="130" width="230" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-46" parent="jFHjM4vxk34ADtfL2BeO-52" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="130" width="230" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-48" parent="jFHjM4vxk34ADtfL2BeO-52" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="EC2 Ubuntu Web App" vertex="1">
+          <mxGeometry height="67.5" width="155" x="37.5" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-50" parent="jFHjM4vxk34ADtfL2BeO-52" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Subnet public" vertex="1">
+          <mxGeometry height="30" width="80" x="75" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-53" connectable="0" parent="jFHjM4vxk34ADtfL2BeO-18" style="group" value="" vertex="1">
+          <mxGeometry height="130" width="230" x="450" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-47" parent="jFHjM4vxk34ADtfL2BeO-53" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="130" width="230" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-49" parent="jFHjM4vxk34ADtfL2BeO-53" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Amazon RDS MySQL" vertex="1">
+          <mxGeometry height="75" width="130" x="50" y="31" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-51" parent="jFHjM4vxk34ADtfL2BeO-53" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Subnet privé" vertex="1">
+          <mxGeometry height="30" width="80" x="75" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-63" edge="1" parent="jFHjM4vxk34ADtfL2BeO-18" source="jFHjM4vxk34ADtfL2BeO-54" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="jFHjM4vxk34ADtfL2BeO-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-65" connectable="0" parent="jFHjM4vxk34ADtfL2BeO-63" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Création des secrets" vertex="1">
+          <mxGeometry relative="1" x="-0.4642" as="geometry">
+            <mxPoint x="40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-83" edge="1" parent="jFHjM4vxk34ADtfL2BeO-18" source="jFHjM4vxk34ADtfL2BeO-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="jFHjM4vxk34ADtfL2BeO-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-84" connectable="0" parent="jFHjM4vxk34ADtfL2BeO-83" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Dump BDD phase 1" vertex="1">
+          <mxGeometry relative="1" x="-0.1212" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-85" edge="1" parent="jFHjM4vxk34ADtfL2BeO-18" source="jFHjM4vxk34ADtfL2BeO-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="jFHjM4vxk34ADtfL2BeO-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-86" connectable="0" parent="jFHjM4vxk34ADtfL2BeO-85" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;Gestion et&lt;/div&gt;Migration 1 fois au début" vertex="1">
+          <mxGeometry relative="1" x="-0.0346" y="-3" as="geometry">
+            <mxPoint x="38" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-54" parent="jFHjM4vxk34ADtfL2BeO-18" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Cloud9 CLI" vertex="1">
+          <mxGeometry height="50" width="195" x="58" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-55" parent="jFHjM4vxk34ADtfL2BeO-18" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="AWS Secrets Manager" vertex="1">
+          <mxGeometry height="50" width="180" x="450" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-67" edge="1" parent="jFHjM4vxk34ADtfL2BeO-18" source="jFHjM4vxk34ADtfL2BeO-48" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="jFHjM4vxk34ADtfL2BeO-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-68" connectable="0" parent="jFHjM4vxk34ADtfL2BeO-67" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Rôle IAM&lt;div&gt;pour récupérer les identifiants&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.3161" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-69" edge="1" parent="jFHjM4vxk34ADtfL2BeO-18" source="jFHjM4vxk34ADtfL2BeO-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="jFHjM4vxk34ADtfL2BeO-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-70" connectable="0" parent="jFHjM4vxk34ADtfL2BeO-69" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Port 3306 (accessible que par l&#39;EC2)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;avec les identifiants des secrets&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1991" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-79" parent="jFHjM4vxk34ADtfL2BeO-18" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="EC2 Phase 1 avec BDD intégrée" vertex="1">
+          <mxGeometry height="67.5" width="202" x="54.5" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-57" edge="1" parent="1" source="jFHjM4vxk34ADtfL2BeO-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="jFHjM4vxk34ADtfL2BeO-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-58" connectable="0" parent="jFHjM4vxk34ADtfL2BeO-57" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="HTTP 80" vertex="1">
+          <mxGeometry relative="1" x="-0.0572" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jFHjM4vxk34ADtfL2BeO-56" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Internet" vertex="1">
+          <mxGeometry height="60" width="70" x="10" y="-491.25" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
