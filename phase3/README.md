@@ -18,12 +18,7 @@ Implémenter l'auto-scaling horizontal de l'application web avec un Application 
 - **Health Checks** : Configuration ELB-based avec seuil d'alerte (2 essais sains, 2 essais malsains), intervalle 30s, timeout 5s, matcher HTTP 200-399.
 
 ### Schéma d'architecture
-```
-Internet -> ALB:80 --(routing)--> EC2 Group (min 2, max 4 instances)
-                                        |
-                                        v
-                                   RDS MySQL (Private)
-```
+![alt text](phase3.drawio.png "Architecture Diagram")
 
 ## Problèmes identifiés et solutions
 
