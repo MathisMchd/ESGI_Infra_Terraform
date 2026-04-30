@@ -1,0 +1,139 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="28.2.7">
+  <diagram name="Phase 3" id="MHn65o9xfAHt3yE214Ng">
+    <mxGraphModel dx="1627" dy="988" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-41" value="Architecture AWS – Phase 3 (Terraform)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="687.5" y="882" width="760" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-42" value="AWS Region : us-east-1" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_region;strokeColor=#147EBA;fillColor=#E6F2F8;verticalAlign=top;align=center;spacingTop=25;fontSize=13;fontStyle=1;fontColor=#147EBA;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="447.5" y="942" width="1360" height="980" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-43" value="Default VPC" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;strokeColor=#8C4FFF;fillColor=#F4EEFF;verticalAlign=top;align=center;spacingTop=25;fontSize=12;fontStyle=1;fontColor=#8C4FFF;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="487.5" y="992" width="1280" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-44" value="Subnets Publics (us-east-1a / 1b / 1c / 1d / 1f)" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_public_subnet;strokeColor=#1A9C3E;fillColor=#E9F7EC;verticalAlign=top;align=center;spacingTop=25;fontSize=11;fontStyle=1;fontColor=#1A9C3E;" vertex="1" parent="1">
+          <mxGeometry x="527.5" y="1047" width="840" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-45" value="Subnet Privé – RDS (db_subnet_group)" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_private_subnet;strokeColor=#DD344C;fillColor=#FEE9EC;verticalAlign=top;align=center;spacingTop=25;fontSize=11;fontStyle=1;fontColor=#DD344C;" vertex="1" parent="1">
+          <mxGeometry x="1397.5" y="1015" width="340" height="492" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-48" value="SG : alb_phase_3&#xa;Ingress 0.0.0.0/0 → :80" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;fontStyle=2;align=center;" vertex="1" parent="1">
+          <mxGeometry x="557.5" y="1082" width="200" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-49" value="" style="shape=mxgraph.aws4.application_load_balancer;fillColor=#E05243;strokeColor=#E05243;fontColor=#ffffff;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="597.5" y="1152" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-50" value="Target Group&#xa;phase3-app-tg&#xa;Port 80 | Health check /" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9;align=center;" vertex="1" parent="1">
+          <mxGeometry x="597.5" y="1272" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-51" value="" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_auto_scaling_group;strokeColor=#F58534;fillColor=#FEF0E6;verticalAlign=top;align=center;spacingTop=28;fontSize=10;fontStyle=1;fontColor=#F58534;" vertex="1" parent="1">
+          <mxGeometry x="567.5" y="1337" width="760" height="425" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-52" value="Launch Template&#xa;phase3-app-*&#xa;AMI: Ubuntu 22.04&#xa;Type: t3.micro&#xa;IAM: LabInstanceProfile&#xa;UserData: bootstrap.sh" style="rounded=1;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;fontSize=9;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="590" y="1528" width="195" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-53" value="SG : phase3_app_sg&#xa;Ingress ALB SG → :80" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;fontStyle=2;align=center;" vertex="1" parent="1">
+          <mxGeometry x="587.5" y="1662" width="195" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-54" value="EC2 Instance #1&#xa;Ubuntu 22.04 – t3.micro&#xa;Node.js App :80&#xa;projet-terraform-phase3" style="shape=mxgraph.aws4.instance;fillColor=#2E7D32;strokeColor=#2E7D32;fontColor=#000000;fontStyle=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="817.5" y="1455" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-55" value="EC2 Instance #2&#xa;Ubuntu 22.04 – t3.micro&#xa;Node.js App :80&#xa;projet-terraform-phase3" style="shape=mxgraph.aws4.instance;fillColor=#2E7D32;strokeColor=#2E7D32;fontColor=#000000;fontStyle=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="942" y="1346" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-56" value="EC2 Instance #N&#xa;(scale-out jusqu&#39;à 4)&#xa;t3.micro" style="shape=mxgraph.aws4.instance;fillColor=#81C784;strokeColor=#388E3C;fontColor=#1a1a1a;fontSize=9;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="1077.5" y="1402" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-57" value="User-Data Bootstrap :&#xa;1. apt install nodejs/npm/mysql-client/jq&#xa;2. Install AWS CLI v2&#xa;3. Download &amp; extract code.zip&#xa;4. npm install aws-sdk&#xa;5. Fetch secret rds-app-secret (retry ×20)&#xa;6. Wait MySQL ready (retry ×20)&#xa;7. CREATE USER nodeapp / DB STUDENTS&#xa;8. npm start :80 (env vars injectées)" style="rounded=1;whiteSpace=wrap;fillColor=#e8f5e9;strokeColor=#388E3C;fontSize=8;align=left;spacingLeft=6;" vertex="1" parent="1">
+          <mxGeometry x="817.5" y="1569" width="480" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-58" value="SG : rds_sg_phase_2&#xa;Ingress App SG → :3306" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;fontStyle=2;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1407.5" y="1082" width="200" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-59" value="" style="shape=mxgraph.aws4.rds_mysql_instance;fillColor=#F58534;strokeColor=#BF5C00;fontColor=#ffffff;fontStyle=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1432.5" y="1142" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-60" value="AWS Secrets Manager&#xa;rds-app-secret-*&#xa;{ host, user, password, db }" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.secrets_manager;fillColor=#DD344C;strokeColor=#DD344C;fontColor=#ffffff;fontStyle=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1427.5" y="1462" width="130" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-61" value="" style="shape=mxgraph.aws4.role;fillColor=#DD344C;strokeColor=#DD344C;fontColor=#ffffff;fontStyle=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1427.5" y="1612" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-62" value="HTTP :80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#147EBA;fontColor=#147EBA;fontStyle=1;fontSize=9;" edge="1" parent="1" target="MmzZZRzJVWttOzWb7i2U-49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="407.5" y="1322" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-63" value="forward :80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#E05243;fontColor=#E05243;fontSize=9;" edge="1" parent="1" source="MmzZZRzJVWttOzWb7i2U-49" target="MmzZZRzJVWttOzWb7i2U-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#2E7D32;" edge="1" parent="1" source="MmzZZRzJVWttOzWb7i2U-50" target="MmzZZRzJVWttOzWb7i2U-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#2E7D32;" edge="1" parent="1" source="MmzZZRzJVWttOzWb7i2U-50" target="MmzZZRzJVWttOzWb7i2U-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#81C784;dashed=1;" edge="1" parent="1" source="MmzZZRzJVWttOzWb7i2U-50" target="MmzZZRzJVWttOzWb7i2U-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-67" value="MySQL :3306&#xa;(SG autorisé)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#F58534;fontColor=#F58534;fontStyle=1;fontSize=9;" edge="1" parent="1" source="MmzZZRzJVWttOzWb7i2U-54" target="MmzZZRzJVWttOzWb7i2U-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#F58534;" edge="1" parent="1" source="MmzZZRzJVWttOzWb7i2U-55" target="MmzZZRzJVWttOzWb7i2U-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-69" value="get-secret-value&#xa;(IAM role)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#DD344C;fontColor=#DD344C;fontStyle=1;fontSize=9;dashed=1;" edge="1" parent="1" source="MmzZZRzJVWttOzWb7i2U-54" target="MmzZZRzJVWttOzWb7i2U-60">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1138" y="1500" />
+              <mxPoint x="1138" y="1542" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-70" value="Terraform crée la version du secret" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#8C4FFF;fontColor=#8C4FFF;fontSize=8;dashed=1;" edge="1" parent="1" source="MmzZZRzJVWttOzWb7i2U-59" target="MmzZZRzJVWttOzWb7i2U-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-71" value="attaché via&#xa;Launch Template" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#DD344C;fontColor=#DD344C;fontSize=8;dashed=1;" edge="1" parent="1" source="MmzZZRzJVWttOzWb7i2U-61" target="MmzZZRzJVWttOzWb7i2U-55">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1493" y="1720" />
+              <mxPoint x="1003" y="1720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-72" value="utilise" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#F58534;fontColor=#F58534;fontSize=9;" edge="1" parent="1" source="MmzZZRzJVWttOzWb7i2U-52" target="MmzZZRzJVWttOzWb7i2U-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-73" value="Légende" style="rounded=1;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=11;verticalAlign=top;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="507.5" y="1833" width="460" height="69" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-74" value="─── Trafic HTTP public" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#147EBA;" vertex="1" parent="1">
+          <mxGeometry x="522.5" y="1862" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-75" value="─── Connexion MySQL :3306" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#F58534;" vertex="1" parent="1">
+          <mxGeometry x="667.5" y="1864" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-76" value="- - Appel Secrets Manager (IAM)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#DD344C;" vertex="1" parent="1">
+          <mxGeometry x="822.5" y="1862" width="175" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-77" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-size: 10px; font-weight: 700;&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(255, 255, 255)&amp;quot;}&quot;&gt;Application Load Balancer&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; padding: 0px; margin: 0px; font-size: 10px; font-weight: 700;&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(255, 255, 255)&amp;quot;}&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-size: 10px; font-weight: 700;&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(255, 255, 255)&amp;quot;}&quot;&gt;phase3-app-alb&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; padding: 0px; margin: 0px; font-size: 10px; font-weight: 700;&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(255, 255, 255)&amp;quot;}&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-size: 10px; font-weight: 700;&quot; data-mx-given-colors=&quot;{&amp;quot;color&amp;quot;:&amp;quot;rgb(255, 255, 255)&amp;quot;}&quot;&gt;Listener :80 HTTP → Target Group&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="699" y="1167" width="189" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-78" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;Utilisateurs&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="358" y="1286" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-81" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;Amazon RDS MySQL 8.0&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;Identifier: rdsinstance&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;Class: db.t3.micro&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;Storage: 20 GB&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;DB: STUDENTS&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;User: myrdsuser&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 9px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;publicly_accessible: false&lt;/span&gt;&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1557.5" y="1139.5" width="125" height="111" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-82" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap; font-size: 9px; font-weight: 700;&quot;&gt;IAM Instance Profile&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap; padding: 0px; margin: 0px; font-size: 9px; font-weight: 700;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap; font-size: 9px; font-weight: 700;&quot;&gt;LabInstanceProfile&lt;/span&gt;&lt;br style=&quot;text-wrap-mode: nowrap; padding: 0px; margin: 0px; font-size: 9px; font-weight: 700;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap; font-size: 9px; font-weight: 700;&quot;&gt;(accès Secrets Manager)&lt;/span&gt;&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="1449" y="1702" width="117" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="MmzZZRzJVWttOzWb7i2U-83" value="&lt;span style=&quot;color: rgb(245, 133, 52); font-size: 10px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;Auto Scaling Group&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(245, 133, 52); font-size: 10px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;color: rgb(245, 133, 52); font-size: 10px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;phase3-app-asg&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(245, 133, 52); font-size: 10px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;color: rgb(245, 133, 52); font-size: 10px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;Min: 2 | Desired: 2 | Max: 4&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; color: rgb(245, 133, 52); font-size: 10px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;&lt;span style=&quot;color: rgb(245, 133, 52); font-size: 10px; font-weight: 700; text-wrap-mode: nowrap;&quot;&gt;Health Check: ELB | Grace: 300s&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="577" y="1359" width="169" height="58" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
